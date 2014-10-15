@@ -1,3 +1,13 @@
-<div class="col-md-12">
-    <img ng-src="{{image.url}}" class="img-responsive"/>
+<div class="row">
+    <div class="col-md-12" id="image">
+        <img ng-src="{{image.url}}" class="img-responsive"/>
+    </div>
+</div>
+<div id="buttons" class="row">
+    <div class="col-md-3 col-md-offset-3" id="dont-like">
+        <button class="btn-lg btn-danger">Don't like</button>
+    </div>
+    <div class="col-md-3 col-md-offset-1" id="like">
+        <button class="btn-lg btn-success">Like</button>
+    </div>
 </div>
