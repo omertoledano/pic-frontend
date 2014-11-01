@@ -10,7 +10,7 @@
  */
 angular
   .module('picFrontendApp', [
-    'ngRoute',
+    'ngRoute', 'facebook'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -21,4 +21,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }).config(['FacebookProvider',
+    function(FacebookProvider){
+      var myAppId = '1488145908127671';
+      FacebookProvider.init(myAppId);
+    }
+  ]);
